@@ -30,9 +30,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="BHi-pS-eEZ">
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="6V8-KM-b4I"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="6V8-KM-b4I">
+                            <connections>
+                                <action selector="buttonSalvar:" destination="vXZ-lx-hvc" id="bDR-Tk-Onm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="textMensagem" destination="cL8-uT-QeI" id="uyp-6Z-tW7"/>
+                        <outlet property="textTitulo" destination="ZlT-9L-uT4" id="v9W-0D-Ocg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

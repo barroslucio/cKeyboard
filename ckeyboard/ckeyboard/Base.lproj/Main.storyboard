@@ -29,7 +29,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BHi-pS-eEZ"/>
+                    <navigationItem key="navigationItem" id="BHi-pS-eEZ">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="6V8-KM-b4I"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

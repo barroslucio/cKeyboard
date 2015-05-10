@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CKBMainViewController : UIViewController
+@interface CKBMainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 
 @end

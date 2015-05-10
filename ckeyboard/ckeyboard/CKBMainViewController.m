@@ -10,6 +10,9 @@
 
 @interface CKBMainViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *lblTitle;
+@property (weak, nonatomic) IBOutlet UITextField *lblContent;
+@property (weak, nonatomic) IBOutlet UITableView *tbViewButtons;
 @end
 
 @implementation CKBMainViewController

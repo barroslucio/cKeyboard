@@ -10,7 +10,7 @@
 		77C02F251AFE404B00AF8997 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F241AFE404B00AF8997 /* main.m */; };
 		77C02F281AFE404B00AF8997 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F271AFE404B00AF8997 /* AppDelegate.m */; };
 		77C02F2B1AFE404B00AF8997 /* ckeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F291AFE404B00AF8997 /* ckeyboard.xcdatamodeld */; };
-		77C02F2E1AFE404B00AF8997 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F2D1AFE404B00AF8997 /* ViewController.m */; };
+		77C02F2E1AFE404B00AF8997 /* CKBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F2D1AFE404B00AF8997 /* CKBMainViewController.m */; };
 		77C02F311AFE404B00AF8997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C02F2F1AFE404B00AF8997 /* Main.storyboard */; };
 		77C02F331AFE404B00AF8997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C02F321AFE404B00AF8997 /* Images.xcassets */; };
 		77C02F361AFE404B00AF8997 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C02F341AFE404B00AF8997 /* LaunchScreen.xib */; };
@@ -35,8 +35,8 @@
 		77C02F261AFE404B00AF8997 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77C02F271AFE404B00AF8997 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		77C02F2A1AFE404B00AF8997 /* ckeyboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ckeyboard.xcdatamodel; sourceTree = "<group>"; };
-		77C02F2C1AFE404B00AF8997 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		77C02F2D1AFE404B00AF8997 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		77C02F2C1AFE404B00AF8997 /* CKBMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKBMainViewController.h; sourceTree = "<group>"; };
+		77C02F2D1AFE404B00AF8997 /* CKBMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKBMainViewController.m; sourceTree = "<group>"; };
 		77C02F301AFE404B00AF8997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77C02F321AFE404B00AF8997 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77C02F351AFE404B00AF8997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -88,8 +88,8 @@
 			children = (
 				77C02F261AFE404B00AF8997 /* AppDelegate.h */,
 				77C02F271AFE404B00AF8997 /* AppDelegate.m */,
-				77C02F2C1AFE404B00AF8997 /* ViewController.h */,
-				77C02F2D1AFE404B00AF8997 /* ViewController.m */,
+				77C02F2C1AFE404B00AF8997 /* CKBMainViewController.h */,
+				77C02F2D1AFE404B00AF8997 /* CKBMainViewController.m */,
 				77C02F2F1AFE404B00AF8997 /* Main.storyboard */,
 				77C02F321AFE404B00AF8997 /* Images.xcassets */,
 				77C02F341AFE404B00AF8997 /* LaunchScreen.xib */,
@@ -229,7 +229,7 @@
 			files = (
 				77C02F2B1AFE404B00AF8997 /* ckeyboard.xcdatamodeld in Sources */,
 				77C02F281AFE404B00AF8997 /* AppDelegate.m in Sources */,
-				77C02F2E1AFE404B00AF8997 /* ViewController.m in Sources */,
+				77C02F2E1AFE404B00AF8997 /* CKBMainViewController.m in Sources */,
 				77C02F251AFE404B00AF8997 /* main.m in Sources */,
 				77C02F4D1AFE408300AF8997 /* Key.m in Sources */,
 			);
@@ -426,6 +426,7 @@
 				77C02F471AFE404B00AF8997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77C02F481AFE404B00AF8997 /* Build configuration list for PBXNativeTarget "ckeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +435,7 @@
 				77C02F4A1AFE404B00AF8997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

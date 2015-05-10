@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 BEPiD Fucapi. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CKBMainViewController.h"
 
-@interface ViewController ()
+@interface CKBMainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CKBMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -60,9 +60,9 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="lblContent" destination="cL8-uT-QeI" id="eWD-9x-Xqq"/>
-                        <outlet property="lblTitle" destination="ZlT-9L-uT4" id="hvB-eo-7Dg"/>
                         <outlet property="tbViewButtons" destination="yF6-Cm-Pk8" id="3Ko-yo-51f"/>
+                        <outlet property="txtFieldContent" destination="cL8-uT-QeI" id="MFa-fV-WMg"/>
+                        <outlet property="txtFieldTitle" destination="ZlT-9L-uT4" id="Fsz-H2-T25"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

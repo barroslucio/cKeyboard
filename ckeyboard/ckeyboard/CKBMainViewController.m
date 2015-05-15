@@ -59,7 +59,11 @@
     if(![_txtFieldTitle hasText] || ![_txtFieldContent hasText])
         return ;
     if(_isEditing) {
-
+        Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:[self.tbViewButtons indexPathForSelectedRow].row];
+        key.title = _txtFieldTitle.text;
+        key.content = _txtFieldContent.text;
+        [[KeyStore sharedStore] saveKeyChanges];
+        _isEditing = false;
     } else {
         [[KeyStore sharedStore] createKeyWithTitle:_txtFieldTitle.text AndContent:_txtFieldContent.text];
     }

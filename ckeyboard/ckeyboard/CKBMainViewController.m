@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldTitle;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldContent;
 @property (weak, nonatomic) IBOutlet UITableView *tbViewButtons;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCancel;
 
 @property (nonatomic) BOOL isEditing;
 @end

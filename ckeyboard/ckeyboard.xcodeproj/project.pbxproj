@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1CD9259F1B059F8C00533B91 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9259E1B059F8C00533B91 /* Key.m */; };
+		1CD925A21B059FD300533B91 /* KeyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A11B059FD300533B91 /* KeyStore.m */; };
 		77C02F251AFE404B00AF8997 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F241AFE404B00AF8997 /* main.m */; };
 		77C02F281AFE404B00AF8997 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F271AFE404B00AF8997 /* AppDelegate.m */; };
 		77C02F2B1AFE404B00AF8997 /* ckeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F291AFE404B00AF8997 /* ckeyboard.xcdatamodeld */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		1CD9259D1B059F8C00533B91 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
 		1CD9259E1B059F8C00533B91 /* Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
+		1CD925A01B059FD300533B91 /* KeyStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyStore.h; sourceTree = "<group>"; };
+		1CD925A11B059FD300533B91 /* KeyStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyStore.m; sourceTree = "<group>"; };
 		77C02F1F1AFE404B00AF8997 /* ckeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ckeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C02F231AFE404B00AF8997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C02F241AFE404B00AF8997 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 			children = (
 				1CD9259D1B059F8C00533B91 /* Key.h */,
 				1CD9259E1B059F8C00533B91 /* Key.m */,
+				1CD925A01B059FD300533B91 /* KeyStore.h */,
+				1CD925A11B059FD300533B91 /* KeyStore.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C02F2B1AFE404B00AF8997 /* ckeyboard.xcdatamodeld in Sources */,
+				1CD925A21B059FD300533B91 /* KeyStore.m in Sources */,
 				77C02F281AFE404B00AF8997 /* AppDelegate.m in Sources */,
 				77C02F2E1AFE404B00AF8997 /* CKBMainViewController.m in Sources */,
 				77C02F251AFE404B00AF8997 /* main.m in Sources */,

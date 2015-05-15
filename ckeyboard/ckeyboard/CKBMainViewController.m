@@ -13,12 +13,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldTitle;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldContent;
 @property (weak, nonatomic) IBOutlet UITableView *tbViewButtons;
+
+@property (nonatomic) BOOL isEditing;
 @end
 
 @implementation CKBMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _isEditing = false;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -32,7 +35,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [[[KeyStore sharedStore] getAllKeys] count];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -40,8 +43,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
-
+    Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:indexPath.row];
+    cell.textLabel.text = key.title;
+    cell.detailTextLabel.text = key.identifier;
+    
     return cell;
+}
+
+- (IBAction)saveShortcut:(UIBarButtonItem *)sender {
+    if(![_txtFieldTitle hasText] || ![_txtFieldContent hasText])
+        return ;
+    if(_isEditing) {
+        [[KeyStore sharedStore] saveKeyChanges];
+        _isEditing = false;
+    } else {
+        [[KeyStore sharedStore] createKeyWithTitle:_txtFieldTitle.text AndContent:_txtFieldContent.text];
+        [_tbViewButtons reloadData];
+    }
 }
 
 @end

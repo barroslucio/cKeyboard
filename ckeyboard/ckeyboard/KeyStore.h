@@ -13,11 +13,10 @@
 
 @interface KeyStore : NSObject
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-
 + (instancetype)sharedStore;
 
 - (Key*)createKeyWithTitle:(NSString*)title AndContent:(NSString*)content;
+- (NSArray*)getAllKeys;
 - (void)removeKey:(Key*)key;
 - (BOOL)saveKeyChanges;
 

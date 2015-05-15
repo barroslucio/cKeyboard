@@ -52,22 +52,18 @@ static NSString *MODEL_ENTITY_NAME = @"Key";
     return key;
 }
 
-- (NSFetchedResultsController *)fetchedResultsController
-{
-    if (!_fetchedResultsController) {
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:MODEL_ENTITY_NAME];
-
-        _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-        
-        NSError *error = nil;
-        if (![_fetchedResultsController performFetch:&error]) {
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
+- (NSArray*)getAllKeys {
+    NSFetchRequest *fetchedRequestKey = [[NSFetchRequest alloc] initWithEntityName:MODEL_ENTITY_NAME];
+    NSError *error;
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchedRequestKey error:&error];
+    
+    if(error) {
+        NSLog(@"Error fetching requesting key! -> %@ - %@", error, error.userInfo);
     }
     
-    return _fetchedResultsController;
+    return objects;
 }
+
 
 - (BOOL)saveKeyChanges {
     NSError *error;

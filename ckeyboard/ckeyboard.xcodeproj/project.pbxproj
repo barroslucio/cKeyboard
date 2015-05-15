@@ -15,7 +15,6 @@
 		77C02F331AFE404B00AF8997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C02F321AFE404B00AF8997 /* Images.xcassets */; };
 		77C02F361AFE404B00AF8997 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C02F341AFE404B00AF8997 /* LaunchScreen.xib */; };
 		77C02F421AFE404B00AF8997 /* ckeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F411AFE404B00AF8997 /* ckeyboardTests.m */; };
-		77C02F4D1AFE408300AF8997 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F4C1AFE408300AF8997 /* Key.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +42,6 @@
 		77C02F3B1AFE404B00AF8997 /* ckeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ckeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C02F401AFE404B00AF8997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C02F411AFE404B00AF8997 /* ckeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ckeyboardTests.m; sourceTree = "<group>"; };
-		77C02F4B1AFE408300AF8997 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
-		77C02F4C1AFE408300AF8997 /* Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +115,6 @@
 				77C02F321AFE404B00AF8997 /* Images.xcassets */,
 				77C02F341AFE404B00AF8997 /* LaunchScreen.xib */,
 				77C02F291AFE404B00AF8997 /* ckeyboard.xcdatamodeld */,
-				77C02F4B1AFE408300AF8997 /* Key.h */,
-				77C02F4C1AFE408300AF8997 /* Key.m */,
 				77C02F221AFE404B00AF8997 /* Supporting Files */,
 			);
 			path = ckeyboard;
@@ -255,7 +250,6 @@
 				77C02F281AFE404B00AF8997 /* AppDelegate.m in Sources */,
 				77C02F2E1AFE404B00AF8997 /* CKBMainViewController.m in Sources */,
 				77C02F251AFE404B00AF8997 /* main.m in Sources */,
-				77C02F4D1AFE408300AF8997 /* Key.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

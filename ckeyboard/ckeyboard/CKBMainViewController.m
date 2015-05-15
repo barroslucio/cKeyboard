@@ -40,19 +40,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell" forIndexPath:indexPath];
-    NSLog(@"pegando -> %@", cell.detailTextLabel.text);
-    Key *key = [[KeyStore sharedStore] getKeyWithIdentifier:cell.detailTextLabel.text];
+    Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:indexPath.row];
     _txtFieldTitle.text = key.title;
     _txtFieldContent.text = key.content;
+    _isEditing = true;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+    KeyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
     Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:indexPath.row];
-    cell.textLabel.text = key.title;
-    cell.detailTextLabel.text = key.identifier;
-    NSLog(@"alocando -> %@", cell.detailTextLabel);
+    cell.lblKeyTitle.text = key.title;
+    cell.keyIdentifier = key.identifier;
     
     return cell;
 }
@@ -61,12 +59,12 @@
     if(![_txtFieldTitle hasText] || ![_txtFieldContent hasText])
         return ;
     if(_isEditing) {
-        [[KeyStore sharedStore] saveKeyChanges];
-        _isEditing = false;
+
     } else {
         [[KeyStore sharedStore] createKeyWithTitle:_txtFieldTitle.text AndContent:_txtFieldContent.text];
-        [_tbViewButtons reloadData];
     }
+    [_tbViewButtons reloadData];
+    _txtFieldTitle.text = _txtFieldContent.text = @"";
 }
 
 @end

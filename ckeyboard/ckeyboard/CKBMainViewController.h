@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Key.h"
 #import "KeyStore.h"
+#import "KeyTableViewCell.h"
 
 @interface CKBMainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

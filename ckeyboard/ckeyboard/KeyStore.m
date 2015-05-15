@@ -52,18 +52,6 @@ static NSString *MODEL_ENTITY_NAME = @"Key";
     return key;
 }
 
--(Key *)getKeyWithIdentifier:(NSString *)identifier {
-    NSFetchRequest *fetchRequestKey = [[NSFetchRequest alloc] initWithEntityName:MODEL_ENTITY_NAME];
-    [fetchRequestKey setPredicate:[NSPredicate predicateWithFormat:@"identifier == %@", identifier]];
-    
-    NSError *error;
-    NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchRequestKey error:&error];
-    if(error) {
-        NSLog(@"Error fetching requesting key! -> %@ - %@", error, error.debugDescription);
-    }
-    return [objects objectAtIndex:0];
-}
-
 - (NSArray*)getAllKeys {
     NSFetchRequest *fetchedRequestKey = [[NSFetchRequest alloc] initWithEntityName:MODEL_ENTITY_NAME];
     NSError *error;

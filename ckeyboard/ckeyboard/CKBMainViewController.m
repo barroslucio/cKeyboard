@@ -55,6 +55,16 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:indexPath.row];
+        [[KeyStore sharedStore] removeKey:key];
+        [[KeyStore sharedStore] saveKeyChanges];
+        [self.tbViewButtons reloadData];
+    }
+}
+
 - (IBAction)saveShortcut:(UIBarButtonItem *)sender {
     if(![_txtFieldTitle hasText] || ![_txtFieldContent hasText])
         return ;

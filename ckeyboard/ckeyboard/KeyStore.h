@@ -16,6 +16,7 @@
 + (instancetype)sharedStore;
 
 - (Key*)createKeyWithTitle:(NSString*)title AndContent:(NSString*)content;
+- (Key*)getKeyWithIdentifier:(NSString*)identifier;
 - (NSArray*)getAllKeys;
 - (void)removeKey:(Key*)key;
 - (BOOL)saveKeyChanges;

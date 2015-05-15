@@ -40,6 +40,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell" forIndexPath:indexPath];
+    NSLog(@"pegando -> %@", cell.detailTextLabel.text);
+    Key *key = [[KeyStore sharedStore] getKeyWithIdentifier:cell.detailTextLabel.text];
+    _txtFieldTitle.text = key.title;
+    _txtFieldContent.text = key.content;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -47,6 +52,7 @@
     Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:indexPath.row];
     cell.textLabel.text = key.title;
     cell.detailTextLabel.text = key.identifier;
+    NSLog(@"alocando -> %@", cell.detailTextLabel);
     
     return cell;
 }

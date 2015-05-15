@@ -65,6 +65,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CD9259A1B059F0600533B91 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		1CD9259B1B059F1100533B91 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				77C02F2C1AFE404B00AF8997 /* CKBMainViewController.h */,
+				77C02F2D1AFE404B00AF8997 /* CKBMainViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		1CD9259C1B059F1F00533B91 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				77C02F2F1AFE404B00AF8997 /* Main.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		77C02F161AFE404B00AF8997 = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +112,9 @@
 			children = (
 				77C02F261AFE404B00AF8997 /* AppDelegate.h */,
 				77C02F271AFE404B00AF8997 /* AppDelegate.m */,
-				77C02F2C1AFE404B00AF8997 /* CKBMainViewController.h */,
-				77C02F2D1AFE404B00AF8997 /* CKBMainViewController.m */,
-				77C02F2F1AFE404B00AF8997 /* Main.storyboard */,
+				1CD9259A1B059F0600533B91 /* model */,
+				1CD9259B1B059F1100533B91 /* controller */,
+				1CD9259C1B059F1F00533B91 /* view */,
 				77C02F321AFE404B00AF8997 /* Images.xcassets */,
 				77C02F341AFE404B00AF8997 /* LaunchScreen.xib */,
 				77C02F291AFE404B00AF8997 /* ckeyboard.xcdatamodeld */,

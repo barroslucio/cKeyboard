@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIColor *defaultBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[[UIColor alloc] initWithRed:92 green:226 blue:237 alpha:1] , NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] } forState:UIControlStateNormal];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[[UIColor alloc] initWithRed:92 green:226 blue:237 alpha:1] , NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] }];
+    [[UINavigationBar appearance] setTintColor:defaultBackgroundColor];
+    [[UINavigationBar appearance] setBarTintColor:defaultBackgroundColor];
+    
+    
     return YES;
 }
 

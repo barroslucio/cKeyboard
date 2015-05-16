@@ -74,7 +74,7 @@ static NSString *MODEL_ENTITY_NAME = @"Key";
         NSLog(@"Error fetching requesting key! -> %@ - %@", error, error.userInfo);
     }
     
-    //retorna o array com os objetos (instâncias de Key) salvos no core data
+    //retorna o array com os objetos (instâncias de Key) salvos no coredata
     return objects;
 }
 

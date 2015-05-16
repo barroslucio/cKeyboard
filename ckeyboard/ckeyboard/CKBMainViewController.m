@@ -136,6 +136,7 @@
 - (IBAction)cancelAddOrEdition:(UIBarButtonItem *)sender {
     _txtFieldTitle.text = _txtFieldContent.text = @"";
     _isEditing = false;
+    [self.tbViewButtons deselectRowAtIndexPath:[self.tbViewButtons indexPathForSelectedRow] animated:YES];
     [self shouldEnableButtonCancel];
 }
 

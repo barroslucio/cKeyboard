@@ -20,11 +20,9 @@
                                 <rect key="frame" x="64" y="229" width="246" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
-                                <rect key="frame" x="64" y="159" width="246" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="activateBtnCancel2:" destination="vXZ-lx-hvc" eventType="editingChanged" id="L78-nh-HwP"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yF6-Cm-Pk8">
                                 <rect key="frame" x="0.0" y="297" width="375" height="370"/>
@@ -54,11 +52,23 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="cTT-QD-Dnw"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
+                                <rect key="frame" x="64" y="159" width="246" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="activateBtnCancel1:" destination="vXZ-lx-hvc" eventType="editingChanged" id="8Um-BK-Tcu"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Novo Botão" id="BHi-pS-eEZ">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="cancel" id="ZUa-LF-7ht"/>
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="cancel" id="ZUa-LF-7ht">
+                            <connections>
+                                <action selector="cancelAddOrEdition:" destination="vXZ-lx-hvc" id="Wgi-wE-WX8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="6V8-KM-b4I">
                             <connections>
                                 <action selector="saveShortcut:" destination="vXZ-lx-hvc" id="iUr-au-r8J"/>

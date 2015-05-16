@@ -44,6 +44,7 @@
     _txtFieldTitle.text = key.title;
     _txtFieldContent.text = key.content;
     _isEditing = true;
+    [_btnCancel setEnabled:[self shouldEnableButtonCancel]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -79,6 +80,34 @@
     }
     [_tbViewButtons reloadData];
     _txtFieldTitle.text = _txtFieldContent.text = @"";
+    [_btnCancel setEnabled:[self shouldEnableButtonCancel]];
 }
 
+- (IBAction)cancelAddOrEdition:(UIBarButtonItem *)sender {
+    _txtFieldTitle.text = _txtFieldContent.text = @"";
+    self.isEditing = false;
+}
+
+- (BOOL)shouldEnableButtonCancel {
+    if(![_txtFieldTitle hasText] && ![_txtFieldContent hasText])
+        return NO;
+    return YES;
+}
+
+- (IBAction)activateBtnCancel1:(id)sender {
+    [_btnCancel setEnabled:[self shouldEnableButtonCancel]];
+}
+
+- (IBAction)activateBtnCancel2:(id)sender {
+    [_btnCancel setEnabled:[self shouldEnableButtonCancel]];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+
+}
 @end

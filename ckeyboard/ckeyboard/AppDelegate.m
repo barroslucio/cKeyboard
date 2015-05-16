@@ -17,13 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UIColor *defaultBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[[UIColor alloc] initWithRed:92 green:226 blue:237 alpha:1] , NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] } forState:UIControlStateNormal];
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[[UIColor alloc] initWithRed:92 green:226 blue:237 alpha:1] , NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] }];
+    UIColor *defaultBackgroundColor = [[UIColor alloc] initWithRed:53/255 green:53/255 blue:63/255 alpha:0];
+    UIColor *defaultTextColor = [[UIColor alloc] initWithRed:92/255 green:226/255 blue:237/255 alpha:0];
     [[UINavigationBar appearance] setTintColor:defaultBackgroundColor];
     [[UINavigationBar appearance] setBarTintColor:defaultBackgroundColor];
     
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:defaultTextColor , NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] } forState:UIControlStateNormal];
+
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:defaultTextColor, NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] }];
     
     return YES;
 }

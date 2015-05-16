@@ -22,13 +22,7 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[[UIColor alloc] initWithRed:92 green:226 blue:237 alpha:1] , NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] }];
     [[UINavigationBar appearance] setTintColor:defaultBackgroundColor];
-    
-//    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
-//     setTitleTextAttributes:
-//     @{NSForegroundColorAttributeName:[UIColor blackColor],
-//       NSFontAttributeName:[UIFont bo:12.0]
-//       }
-//     forState:UIControlStateNormal];
+    [[UINavigationBar appearance] setBarTintColor:defaultBackgroundColor];
     
     
     return YES;

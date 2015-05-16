@@ -83,12 +83,17 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Pega referência ao objeto que já está salvo no core data
         Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:indexPath.row];
-        
+    
         // manda este objeto ser deletado
         [[KeyStore sharedStore] removeKey:key];
         
         // solicita ao core data salvar as mudanças (remoção)
         [[KeyStore sharedStore] saveKeyChanges];
+        
+        if(_isEditing && (indexPath.row == [self.tbViewButtons indexPathForSelectedRow].row)) {
+            [self performSelector:@selector(cancelAddOrEdition:) withObject:_btnCancel];
+            _isEditing = false;
+        }
         
         // recarrega os dados da table view
         [self.tbViewButtons reloadData];

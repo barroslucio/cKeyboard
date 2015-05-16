@@ -21,6 +21,8 @@
 
 // variável booleana que sinaliza se a célula está sendo editada ou não
 @property (nonatomic) BOOL isEditing;
+@property (nonatomic) NSInteger editingIndex;
+
 @end
 
 @implementation CKBMainViewController
@@ -48,6 +50,7 @@
 
     // Ao selecionar uma célula da table view o usuário poderá editá-la.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    _editingIndex = indexPath.row;
     // Faz consulta ao core data e pega referência àquela instância de Key que foi salva
     Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:indexPath.row];
     
@@ -81,6 +84,7 @@
 {
     // a célula será deletada
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
         // Pega referência ao objeto que já está salvo no core data
         Key *key = [[[KeyStore sharedStore] getAllKeys] objectAtIndex:indexPath.row];
     
@@ -90,13 +94,12 @@
         // solicita ao core data salvar as mudanças (remoção)
         [[KeyStore sharedStore] saveKeyChanges];
         
-        if(_isEditing && (indexPath.row == [self.tbViewButtons indexPathForSelectedRow].row)) {
+        if(_isEditing && (indexPath.row == _editingIndex)) {
             [self performSelector:@selector(cancelAddOrEdition:) withObject:_btnCancel];
-            _isEditing = false;
         }
         
         // recarrega os dados da table view
-        [self.tbViewButtons reloadData];
+        [tableView reloadData];
     }
 }
 
@@ -119,6 +122,7 @@
         
         // "desliga" o sinalizador de edição
         _isEditing = false;
+        _editingIndex = -1;
         
     // caso contrário, o usuário está salvando pela primeira vez, então
     } else {

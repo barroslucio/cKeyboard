@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C639B2F1B07A7E900E1F4EF /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C639B2D1B07A7E900E1F4EF /* JosefinSans-Bold.ttf */; };
 		1C639B301B07A7E900E1F4EF /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C639B2E1B07A7E900E1F4EF /* JosefinSans-Light.ttf */; };
+		1C639B331B07CED200E1F4EF /* TextField1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C639B321B07CED200E1F4EF /* TextField1.png */; };
 		1CD9259F1B059F8C00533B91 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9259E1B059F8C00533B91 /* Key.m */; };
 		1CD925A21B059FD300533B91 /* KeyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A11B059FD300533B91 /* KeyStore.m */; };
 		1CD925A51B05AB5300533B91 /* KeyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A41B05AB5300533B91 /* KeyTableViewCell.m */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		1C639B2D1B07A7E900E1F4EF /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
 		1C639B2E1B07A7E900E1F4EF /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Light.ttf"; sourceTree = "<group>"; };
+		1C639B321B07CED200E1F4EF /* TextField1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextField1.png; sourceTree = "<group>"; };
 		1CD9259D1B059F8C00533B91 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
 		1CD9259E1B059F8C00533B91 /* Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
 		1CD925A01B059FD300533B91 /* KeyStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyStore.h; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		1C639B291B07A78200E1F4EF /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				1C639B311B07CEC300E1F4EF /* images */,
 				1C639B2A1B07A78C00E1F4EF /* fonts */,
 			);
 			name = resources;
@@ -90,6 +93,14 @@
 				1C639B2E1B07A7E900E1F4EF /* JosefinSans-Light.ttf */,
 			);
 			name = fonts;
+			sourceTree = "<group>";
+		};
+		1C639B311B07CEC300E1F4EF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1C639B321B07CED200E1F4EF /* TextField1.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		1CD9259A1B059F0600533B91 /* model */ = {
@@ -268,6 +279,7 @@
 				77C02F361AFE404B00AF8997 /* LaunchScreen.xib in Resources */,
 				1C639B301B07A7E900E1F4EF /* JosefinSans-Light.ttf in Resources */,
 				77C02F331AFE404B00AF8997 /* Images.xcassets in Resources */,
+				1C639B331B07CED200E1F4EF /* TextField1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

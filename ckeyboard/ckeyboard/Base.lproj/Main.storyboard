@@ -56,9 +56,8 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="cTT-QD-Dnw"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Título" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
                                 <rect key="frame" x="64" y="159" width="246" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -67,9 +66,8 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="g00-Z6-zbl"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conteúdo" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-uT-QeI">
-                                <rect key="frame" x="64" y="229" width="246" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Conteúdo" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-uT-QeI">
+                                <rect key="frame" x="64" y="216" width="246" height="55"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -127,4 +125,7 @@
             <point key="canvasLocation" x="414" y="-433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TextField1.png" width="1095" height="120"/>
+    </resources>
 </document>

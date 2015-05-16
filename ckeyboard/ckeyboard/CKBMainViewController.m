@@ -166,7 +166,6 @@
     // tratamento para o botão Cancel
 - (void)shouldEnableButtonCancel {
     BOOL enableBtn;
-    NSString *btnText;
     // caso não tenha texto nos text fields ele fica destivado, senão fica ativado
     if(_isEditing)
         enableBtn = YES;
@@ -175,13 +174,7 @@
     else
         enableBtn = YES;
     
-    if (enableBtn) {
-        btnText = @"Cancelar";
-    } else {
-        btnText = @"";
-    }
     [_btnCancel setEnabled:enableBtn];
-    [_btnCancel setTitle:btnText];
 }
 
 - (void)changeTitleAccordingToTheContext{

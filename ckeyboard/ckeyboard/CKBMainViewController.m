@@ -32,7 +32,9 @@
     // inicializa o sinalizador de ediçao como falso
     _isEditing = false;
     
-
+    NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor grayColor]};
+    _txtFieldTitle.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Título" attributes: attributes];
+    _txtFieldContent.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Atalho" attributes: attributes];
 }
 
 - (void)didReceiveMemoryWarning {

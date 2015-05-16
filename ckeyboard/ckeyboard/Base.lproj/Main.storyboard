@@ -25,11 +25,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Título" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
                                 <rect key="frame" x="64" y="159" width="246" height="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                 <connections>
                                     <action selector="activateBtnCancel1:" destination="vXZ-lx-hvc" eventType="editingChanged" id="8Um-BK-Tcu"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="g00-Z6-zbl"/>
@@ -39,7 +39,7 @@
                                 <rect key="frame" x="64" y="216" width="246" height="55"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                 <connections>
                                     <action selector="activateBtnCancel2:" destination="vXZ-lx-hvc" eventType="editingChanged" id="L78-nh-HwP"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="tbJ-ps-9hL"/>

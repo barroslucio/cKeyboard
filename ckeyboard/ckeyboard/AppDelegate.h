@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 BEPiD Fucapi. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 

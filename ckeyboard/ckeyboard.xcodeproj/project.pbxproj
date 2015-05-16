@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C639B2F1B07A7E900E1F4EF /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C639B2D1B07A7E900E1F4EF /* JosefinSans-Bold.ttf */; };
+		1C639B301B07A7E900E1F4EF /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C639B2E1B07A7E900E1F4EF /* JosefinSans-Light.ttf */; };
 		1CD9259F1B059F8C00533B91 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9259E1B059F8C00533B91 /* Key.m */; };
 		1CD925A21B059FD300533B91 /* KeyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A11B059FD300533B91 /* KeyStore.m */; };
 		1CD925A51B05AB5300533B91 /* KeyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A41B05AB5300533B91 /* KeyTableViewCell.m */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C639B2D1B07A7E900E1F4EF /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		1C639B2E1B07A7E900E1F4EF /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Light.ttf"; sourceTree = "<group>"; };
 		1CD9259D1B059F8C00533B91 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
 		1CD9259E1B059F8C00533B91 /* Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
 		1CD925A01B059FD300533B91 /* KeyStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyStore.h; sourceTree = "<group>"; };
@@ -71,6 +75,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C639B291B07A78200E1F4EF /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C639B2A1B07A78C00E1F4EF /* fonts */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		1C639B2A1B07A78C00E1F4EF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1C639B2D1B07A7E900E1F4EF /* JosefinSans-Bold.ttf */,
+				1C639B2E1B07A7E900E1F4EF /* JosefinSans-Light.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		1CD9259A1B059F0600533B91 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +148,7 @@
 				1CD9259A1B059F0600533B91 /* model */,
 				1CD9259B1B059F1100533B91 /* controller */,
 				1CD9259C1B059F1F00533B91 /* view */,
+				1C639B291B07A78200E1F4EF /* resources */,
 				77C02F321AFE404B00AF8997 /* Images.xcassets */,
 				77C02F341AFE404B00AF8997 /* LaunchScreen.xib */,
 				77C02F291AFE404B00AF8997 /* ckeyboard.xcdatamodeld */,
@@ -242,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C02F311AFE404B00AF8997 /* Main.storyboard in Resources */,
+				1C639B2F1B07A7E900E1F4EF /* JosefinSans-Bold.ttf in Resources */,
 				77C02F361AFE404B00AF8997 /* LaunchScreen.xib in Resources */,
+				1C639B301B07A7E900E1F4EF /* JosefinSans-Light.ttf in Resources */,
 				77C02F331AFE404B00AF8997 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

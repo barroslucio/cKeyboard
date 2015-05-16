@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Novo Botão-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="CKBMainViewController" sceneMemberID="viewController">
@@ -66,16 +66,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="BHi-pS-eEZ">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Cancelar" id="zqX-v4-ma1">
+                            <connections>
+                                <action selector="cancelAddOrEdition:" destination="vXZ-lx-hvc" id="2w6-I8-QHe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="6V8-KM-b4I">
                             <connections>
-                                <action selector="buttonSalvar:" destination="vXZ-lx-hvc" id="bDR-Tk-Onm"/>
+                                <action selector="saveShortcut:" destination="vXZ-lx-hvc" id="SZU-YB-f8X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="textMensagem" destination="cL8-uT-QeI" id="uyp-6Z-tW7"/>
-                        <outlet property="textTitulo" destination="ZlT-9L-uT4" id="v9W-0D-Ocg"/>
+                        <outlet property="btnCancel" destination="zqX-v4-ma1" id="pmo-JP-tQz"/>
+                        <outlet property="tbViewButtons" destination="yF6-Cm-Pk8" id="I3A-0r-d0F"/>
+                        <outlet property="txtFieldContent" destination="cL8-uT-QeI" id="dQY-BE-Ynf"/>
+                        <outlet property="txtFieldTitle" destination="ZlT-9L-uT4" id="JYX-Vc-p3a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

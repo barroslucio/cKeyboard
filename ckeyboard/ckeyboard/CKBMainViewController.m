@@ -144,11 +144,16 @@
 
     // tratamento para o botão Cancel
 - (void)shouldEnableButtonCancel {
+    BOOL enableBtn;
     // caso não tenha texto nos text fields ele fica destivado, senão fica ativado
-    if(![_txtFieldTitle hasText] && ![_txtFieldContent hasText])
-        [_btnCancel setEnabled:NO];
+    if(_isEditing)
+        enableBtn = YES;
+    else if(![_txtFieldTitle hasText] && ![_txtFieldContent hasText])
+        enableBtn = NO;
     else
-        [_btnCancel setEnabled:YES];
+        enableBtn = YES;
+    
+    [self.btnCancel setEnabled:enableBtn];
 }
 
 - (void)changeTitleAccordingToTheContext{

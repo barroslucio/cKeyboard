@@ -8,6 +8,9 @@
 
 #import "CKBMainViewController.h"
 
+#define MAX_TITLE_CHARACTERS 10
+#define MAX_CONTENT_CHARACTERS 25
+
 @interface CKBMainViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldTitle;
@@ -44,7 +47,7 @@
     _txtFieldTitle.text = key.title;
     _txtFieldContent.text = key.content;
     _isEditing = true;
-    [_btnCancel setEnabled:[self shouldEnableButtonCancel]];
+    [self shouldEnableButtonCancel];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,26 +83,28 @@
     }
     [_tbViewButtons reloadData];
     _txtFieldTitle.text = _txtFieldContent.text = @"";
-    [_btnCancel setEnabled:[self shouldEnableButtonCancel]];
+    [self shouldEnableButtonCancel];
 }
 
 - (IBAction)cancelAddOrEdition:(UIBarButtonItem *)sender {
     _txtFieldTitle.text = _txtFieldContent.text = @"";
-    self.isEditing = false;
+    _isEditing = false;
+    [self shouldEnableButtonCancel];
 }
 
-- (BOOL)shouldEnableButtonCancel {
+- (void)shouldEnableButtonCancel {
     if(![_txtFieldTitle hasText] && ![_txtFieldContent hasText])
-        return NO;
-    return YES;
+        [_btnCancel setEnabled:NO];
+    else
+        [_btnCancel setEnabled:YES];
 }
 
 - (IBAction)activateBtnCancel1:(id)sender {
-    [_btnCancel setEnabled:[self shouldEnableButtonCancel]];
+    [self shouldEnableButtonCancel];
 }
 
 - (IBAction)activateBtnCancel2:(id)sender {
-    [_btnCancel setEnabled:[self shouldEnableButtonCancel]];
+    [self shouldEnableButtonCancel];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -108,6 +113,19 @@
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-
+    int MAX_LENGTH;
+    if(textField == _txtFieldTitle) {
+        MAX_LENGTH = MAX_TITLE_CHARACTERS;
+    } else {
+        MAX_LENGTH = MAX_CONTENT_CHARACTERS;
+    }
+    if(range.length + range.location > textField.text.length)
+    {
+        return NO;
+    }
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    NSLog(@"%ld", newLength);
+        NSLog(@"%ld\n\n", range.location);
+    return newLength <= MAX_LENGTH;
 }
 @end

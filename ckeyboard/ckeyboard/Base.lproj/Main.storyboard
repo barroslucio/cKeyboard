@@ -22,6 +22,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="activateBtnCancel2:" destination="vXZ-lx-hvc" eventType="editingChanged" id="L78-nh-HwP"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="tbJ-ps-9hL"/>
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yF6-Cm-Pk8">
@@ -58,6 +59,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="activateBtnCancel1:" destination="vXZ-lx-hvc" eventType="editingChanged" id="8Um-BK-Tcu"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="g00-Z6-zbl"/>
                                 </connections>
                             </textField>
                         </subviews>

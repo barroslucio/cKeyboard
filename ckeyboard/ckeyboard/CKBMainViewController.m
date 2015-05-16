@@ -31,14 +31,15 @@
     [super viewDidLoad];
     // inicializa o sinalizador de ediçao como falso
     _isEditing = false;
-    // Do any additional setup after loading the view, typically from a nib.
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma TableViewDelegate methods implementation
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -102,7 +103,7 @@
         [tableView reloadData];
     }
 }
-
+#pragma Actions implementation
 - (IBAction)saveShortcut:(UIBarButtonItem *)sender {
     // só salva se os textfields possuírem conteúdo
     if(![_txtFieldTitle hasText] || ![_txtFieldContent hasText])
@@ -151,9 +152,21 @@
     [self shouldEnableButtonCancel];
 }
 
+// esses actions fazem a mesma coisa, um pra cada text field
+// a cada vez que o valor num text field muda, eles verificam se o botão Cancel deve permanecer ativo
+- (IBAction)activateBtnCancel1:(id)sender {
+    [self shouldEnableButtonCancel];
+}
+
+- (IBAction)activateBtnCancel2:(id)sender {
+    [self shouldEnableButtonCancel];
+}
+
+#pragma Auxiliary methods
     // tratamento para o botão Cancel
 - (void)shouldEnableButtonCancel {
     BOOL enableBtn;
+    NSString *btnText;
     // caso não tenha texto nos text fields ele fica destivado, senão fica ativado
     if(_isEditing)
         enableBtn = YES;
@@ -162,7 +175,13 @@
     else
         enableBtn = YES;
     
-    [self.btnCancel setEnabled:enableBtn];
+    if (enableBtn) {
+        btnText = @"Cancelar";
+    } else {
+        btnText = @"";
+    }
+    [_btnCancel setEnabled:enableBtn];
+    [_btnCancel setTitle:btnText];
 }
 
 - (void)changeTitleAccordingToTheContext{
@@ -172,16 +191,7 @@
         [self.navigationItem setTitle:@"Novo Botão"];
 }
 
-    // esses actions fazem a mesma coisa, um pra cada text field
-    // a cada vez que o valor num text field muda, eles verificam se o botão Cancel deve permanecer ativo
-- (IBAction)activateBtnCancel1:(id)sender {
-    [self shouldEnableButtonCancel];
-}
-
-- (IBAction)activateBtnCancel2:(id)sender {
-    [self shouldEnableButtonCancel];
-}
-
+#pragma TextFieldDelegate methods implementation
     // Esconder o teclado (ao clicar na tecla return)
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];

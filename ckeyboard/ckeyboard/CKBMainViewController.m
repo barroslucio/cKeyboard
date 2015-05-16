@@ -60,8 +60,7 @@
     
     // Verifica se deve ativar o botão Cancel
     [self shouldEnableButtonCancel];
-    
-    [[UITabBarItem appearance] setTitle:@"Editar Botão"];
+    [self changeTitleAccordingToTheContext];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -130,6 +129,8 @@
     
     // trata o botão Cancell
     [self shouldEnableButtonCancel];
+    
+    [self changeTitleAccordingToTheContext];
 }
 
     // ação executada quando o botão Cancel for clicado
@@ -137,6 +138,7 @@
     _txtFieldTitle.text = _txtFieldContent.text = @"";
     _isEditing = false;
     [self.tbViewButtons deselectRowAtIndexPath:[self.tbViewButtons indexPathForSelectedRow] animated:YES];
+    [self changeTitleAccordingToTheContext];
     [self shouldEnableButtonCancel];
 }
 
@@ -147,6 +149,13 @@
         [_btnCancel setEnabled:NO];
     else
         [_btnCancel setEnabled:YES];
+}
+
+- (void)changeTitleAccordingToTheContext{
+    if(_isEditing)
+        [self.navigationItem setTitle:@"Editar Botão"];
+    else
+        [self.navigationItem setTitle:@"Novo Botão"];
 }
 
     // esses actions fazem a mesma coisa, um pra cada text field

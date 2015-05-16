@@ -60,6 +60,8 @@
     
     // Verifica se deve ativar o botão Cancel
     [self shouldEnableButtonCancel];
+    
+    [[UITabBarItem appearance] setTitle:@"Editar Botão"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -175,8 +177,6 @@
         return NO;
     }
     NSUInteger newLength = [textField.text length] + [string length] - range.length;
-    NSLog(@"%ld", newLength);
-        NSLog(@"%ld\n\n", range.location);
     return newLength <= MAX_LENGTH;
 }
 

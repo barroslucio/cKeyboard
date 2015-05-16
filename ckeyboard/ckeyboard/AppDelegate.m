@@ -16,15 +16,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    UIColor *defaultBackgroundColor = [[UIColor alloc] initWithRed:53/255 green:53/255 blue:63/255 alpha:0];
-    UIColor *defaultTextColor = [[UIColor alloc] initWithRed:92/255 green:226/255 blue:237/255 alpha:0];
-    [[UINavigationBar appearance] setTintColor:defaultBackgroundColor];
-    [[UINavigationBar appearance] setBarTintColor:defaultBackgroundColor];
+    // seta a cor de fundo da NavigationBar
+    UIColor *defaultBackgroundColor = [[UIColor alloc] initWithRed:38.0/255 green:39.0/255 blue:43.0/255 alpha:1];
+    // seta os atributos dos textos na NavigationBar
+    NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor whiteColor] , NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] };
     
-    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:defaultTextColor , NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] } forState:UIControlStateNormal];
-
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:defaultTextColor, NSFontAttributeName:[UIFont fontWithName:@"JosefinSans-Bold" size:22] }];
+    // seta os atributos de texto
+    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+    
+    // seta as cores
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
+    [[UINavigationBar appearance] setBarTintColor:defaultBackgroundColor];
     
     return YES;
 }

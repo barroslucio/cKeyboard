@@ -33,8 +33,8 @@
     _isEditing = false;
     
     NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor grayColor]};
-    _txtFieldTitle.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Título" attributes: attributes];
-    _txtFieldContent.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Mensagem" attributes: attributes];
+    _txtFieldTitle.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Title" attributes: attributes];
+    _txtFieldContent.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Message" attributes: attributes];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreData.h"
+#import <CoreData/CoreData.h>
 
-@interface KeyboardViewController : UIInputViewController
+@interface KeyboardViewController : UIInputViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

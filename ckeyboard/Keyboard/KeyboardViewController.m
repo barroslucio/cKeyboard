@@ -9,7 +9,7 @@
 #import "KeyboardViewController.h"
 
 @interface KeyboardViewController ()
-@property (nonatomic, strong) UIButton *nextKeyboardButton;
+@property (strong, nonatomic) IBOutlet UILabel *label;
 @end
 
 @implementation KeyboardViewController
@@ -23,21 +23,78 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Perform custom UI setup here
-    self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
-    [self.nextKeyboardButton sizeToFit];
-    self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
+    CoreData *appDel = [[CoreData alloc] init];
+    NSManagedObjectContext *context = appDel.managedObjectContext;
     
-    [self.nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Key" inManagedObjectContext:context];
     
-    [self.view addSubview:self.nextKeyboardButton];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
     
-    NSLayoutConstraint *nextKeyboardButtonLeftSideConstraint = [NSLayoutConstraint constraintWithItem:self.nextKeyboardButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *nextKeyboardButtonBottomConstraint = [NSLayoutConstraint constraintWithItem:self.nextKeyboardButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
-    [self.view addConstraints:@[nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint]];
+    [request setEntity:entity];
+    
+    [request entityName];
+    request.returnsObjectsAsFaults = false;
+    
+    NSArray *results = [[NSArray alloc] init];
+    results = [context executeFetchRequest:request error:nil];
+    
+    self.label.text = [NSString stringWithFormat:@"%ld", results.count];
+    
+    
+    
+    
+   
 }
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    CoreData *appDel = [[CoreData alloc] init];
+    NSManagedObjectContext *context = appDel.managedObjectContext;
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Key" inManagedObjectContext:context];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    [request setEntity:entity];
+    
+    [request entityName];
+    request.returnsObjectsAsFaults = false;
+    
+    NSArray *results = [[NSArray alloc] init];
+    results = [context executeFetchRequest:request error:nil];
+    
+    
+    UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];
+    detailTitle.text = [results[indexPath.row] valueForKey:@"title"];
+
+    return cell;
+}
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    CoreData *appDel = [[CoreData alloc] init];
+    NSManagedObjectContext *context = appDel.managedObjectContext;
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Key" inManagedObjectContext:context];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    [request setEntity:entity];
+    
+    [request entityName];
+    request.returnsObjectsAsFaults = false;
+    
+    NSArray *results = [[NSArray alloc] init];
+    results = [context executeFetchRequest:request error:nil];
+    return results.count;
+    }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -50,14 +107,6 @@
 
 - (void)textDidChange:(id<UITextInput>)textInput {
     // The app has just changed the document's contents, the document context has been updated.
-    
-    UIColor *textColor = nil;
-    if (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) {
-        textColor = [UIColor whiteColor];
-    } else {
-        textColor = [UIColor blackColor];
-    }
-    [self.nextKeyboardButton setTitleColor:textColor forState:UIControlStateNormal];
-}
+   }
 
 @end

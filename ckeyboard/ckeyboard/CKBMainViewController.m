@@ -181,9 +181,9 @@
 
 - (void)changeTitleAccordingToTheContext{
     if(_isEditing)
-        [self.navigationItem setTitle:@"Editar Botão"];
+        [self.navigationItem setTitle:@"Edit Button"];
     else
-        [self.navigationItem setTitle:@"Novo Botão"];
+        [self.navigationItem setTitle:@"New Button"];
 }
 
 #pragma TextFieldDelegate methods implementation

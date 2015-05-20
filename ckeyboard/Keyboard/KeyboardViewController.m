@@ -9,7 +9,6 @@
 #import "KeyboardViewController.h"
 
 @interface KeyboardViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *label;
 @end
 
 @implementation KeyboardViewController
@@ -22,28 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    CoreData *appDel = [[CoreData alloc] init];
-    NSManagedObjectContext *context = appDel.managedObjectContext;
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Key" inManagedObjectContext:context];
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    
-    [request setEntity:entity];
-    
-    [request entityName];
-    request.returnsObjectsAsFaults = false;
-    
-    NSArray *results = [[NSArray alloc] init];
-    results = [context executeFetchRequest:request error:nil];
-    
-    self.label.text = [NSString stringWithFormat:@"%ld", results.count];
-    
-    
-    
-    
+
    
 }
 

@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOu-LA-tl3">
-                                <rect key="frame" x="327" y="380" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-gF-FPi">
                                 <rect key="frame" x="0.0" y="0.0" width="531" height="357"/>
                                 <color key="backgroundColor" red="0.82067399429999999" green="0.98137939019999998" blue="0.98944523360000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,12 +57,10 @@
                             <constraint firstItem="kiM-gF-FPi" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="-16" id="Jtw-NC-6mb"/>
                             <constraint firstItem="kiM-gF-FPi" firstAttribute="top" secondItem="mbH-65-deq" secondAttribute="topMargin" id="MFo-Td-uDn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kiM-gF-FPi" secondAttribute="trailing" constant="-25" id="tAd-JL-Iop"/>
-                            <constraint firstItem="aOu-LA-tl3" firstAttribute="top" secondItem="kiM-gF-FPi" secondAttribute="bottom" constant="5" id="wud-oU-OY0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="kiM-gF-FPi" id="BC6-GM-P2x"/>
-                        <outlet property="label" destination="aOu-LA-tl3" id="ztp-Xx-OLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUQ-Lo-wAf" userLabel="First Responder" sceneMemberID="firstResponder"/>

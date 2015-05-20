@@ -29,6 +29,7 @@
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
+   /*
     CoreData *appDel = [[CoreData alloc] init];
     NSManagedObjectContext *context = appDel.managedObjectContext;
     
@@ -47,7 +48,10 @@
     
     UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];
     detailTitle.text = [results[indexPath.row] valueForKey:@"title"];
-
+    */
+    
+    UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];
+    detailTitle.text = @"Key Title";
     return cell;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -56,6 +60,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+   /* 
     CoreData *appDel = [[CoreData alloc] init];
     NSManagedObjectContext *context = appDel.managedObjectContext;
     
@@ -71,6 +76,8 @@
     NSArray *results = [[NSArray alloc] init];
     results = [context executeFetchRequest:request error:nil];
     return results.count;
+    */
+    return 10;
     }
 
 

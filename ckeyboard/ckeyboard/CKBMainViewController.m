@@ -10,7 +10,7 @@
 
 // definição da quantidade máxima dos caracteres de cada campo (título e conteúdo)
 #define MAX_TITLE_CHARACTERS 15
-#define MAX_CONTENT_CHARACTERS 25
+#define MAX_CONTENT_CHARACTERS 50
 
 @interface CKBMainViewController ()
 // outlets para a storyboard

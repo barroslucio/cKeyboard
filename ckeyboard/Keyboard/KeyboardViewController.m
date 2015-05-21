@@ -49,10 +49,14 @@
     UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];
     detailTitle.text = [results[indexPath.row] valueForKey:@"title"];
     */
+    UIButton *detailButton = (UIButton *) [cell.contentView viewWithTag:1];
+    [detailButton setTitle:@"Key" forState:UIControlStateNormal] ;
     
-    UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];
-    detailTitle.text = @"Key Title";
     return cell;
+    
+  //  UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];
+//    detailTitle.text = @"Key Title";
+ //   return cell;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {

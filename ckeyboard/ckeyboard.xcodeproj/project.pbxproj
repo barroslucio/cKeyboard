@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C639B2F1B07A7E900E1F4EF /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C639B2D1B07A7E900E1F4EF /* JosefinSans-Bold.ttf */; };
 		1C639B301B07A7E900E1F4EF /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C639B2E1B07A7E900E1F4EF /* JosefinSans-Light.ttf */; };
-		1C639B331B07CED200E1F4EF /* TextField1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C639B321B07CED200E1F4EF /* TextField1.png */; };
 		1CD9259F1B059F8C00533B91 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9259E1B059F8C00533B91 /* Key.m */; };
 		1CD925A21B059FD300533B91 /* KeyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A11B059FD300533B91 /* KeyStore.m */; };
 		1CD925A51B05AB5300533B91 /* KeyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A41B05AB5300533B91 /* KeyTableViewCell.m */; };
@@ -26,6 +25,8 @@
 		77D48A321B07F68E0087EE12 /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 77D48A291B07F68E0087EE12 /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		77E9D5961B0A0E8D00248EF4 /* ckeyboard.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 77C02F291AFE404B00AF8997 /* ckeyboard.xcdatamodeld */; };
 		77E9D5991B0B7E2100248EF4 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E9D5981B0B7E2100248EF4 /* CoreData.m */; };
+		BDBD00121B0E1811003F8439 /* texField1.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBD00111B0E1811003F8439 /* texField1.png */; };
+		BDBD00141B0E1905003F8439 /* textField2.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBD00131B0E1905003F8439 /* textField2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,6 @@
 /* Begin PBXFileReference section */
 		1C639B2D1B07A7E900E1F4EF /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
 		1C639B2E1B07A7E900E1F4EF /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Light.ttf"; sourceTree = "<group>"; };
-		1C639B321B07CED200E1F4EF /* TextField1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextField1.png; sourceTree = "<group>"; };
 		1CD9259D1B059F8C00533B91 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
 		1CD9259E1B059F8C00533B91 /* Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
 		1CD925A01B059FD300533B91 /* KeyStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyStore.h; sourceTree = "<group>"; };
@@ -92,6 +92,8 @@
 		77E9D5951B0A0E3100248EF4 /* ckeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ckeyboard.entitlements; sourceTree = "<group>"; };
 		77E9D5971B0B7E2100248EF4 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		77E9D5981B0B7E2100248EF4 /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
+		BDBD00111B0E1811003F8439 /* texField1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texField1.png; sourceTree = "<group>"; };
+		BDBD00131B0E1905003F8439 /* textField2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textField2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,8 @@
 		1C639B311B07CEC300E1F4EF /* images */ = {
 			isa = PBXGroup;
 			children = (
-				1C639B321B07CED200E1F4EF /* TextField1.png */,
+				BDBD00111B0E1811003F8439 /* texField1.png */,
+				BDBD00131B0E1905003F8439 /* textField2.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -376,10 +379,11 @@
 			files = (
 				77C02F311AFE404B00AF8997 /* Main.storyboard in Resources */,
 				1C639B2F1B07A7E900E1F4EF /* JosefinSans-Bold.ttf in Resources */,
+				BDBD00141B0E1905003F8439 /* textField2.png in Resources */,
 				77C02F361AFE404B00AF8997 /* LaunchScreen.xib in Resources */,
 				1C639B301B07A7E900E1F4EF /* JosefinSans-Light.ttf in Resources */,
+				BDBD00121B0E1811003F8439 /* texField1.png in Resources */,
 				77C02F331AFE404B00AF8997 /* Images.xcassets in Resources */,
-				1C639B331B07CED200E1F4EF /* TextField1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

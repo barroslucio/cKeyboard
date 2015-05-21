@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " clearsOnBeginEditing="YES" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
                                 <rect key="frame" x="70" y="114" width="250" height="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="20"/>

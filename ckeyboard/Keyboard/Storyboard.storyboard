@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NVg-cj-b5B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NVg-cj-b5B">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-gF-FPi">
-                                <rect key="frame" x="0.0" y="0.0" width="531" height="357"/>
-                                <color key="backgroundColor" red="0.82067399429999999" green="0.98137939019999998" blue="0.98944523360000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="527"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LpA-t9-qdl">
                                     <size key="itemSize" width="225" height="98"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,16 +34,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="225" height="98"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0m-rK-2LM">
-                                                    <rect key="frame" x="8" y="36" width="127" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0m-rK-2LM">
+                                                    <rect key="frame" x="8" y="21" width="209" height="54"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.36078431372549019" green="0.88627450980392153" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="z0m-rK-2LM" secondAttribute="bottom" constant="15" id="Jeu-iM-Y6S"/>
+                                            <constraint firstItem="z0m-rK-2LM" firstAttribute="leading" secondItem="MIt-aI-Pci" secondAttribute="leadingMargin" id="Jz5-jz-qwm"/>
+                                            <constraint firstItem="z0m-rK-2LM" firstAttribute="trailing" secondItem="MIt-aI-Pci" secondAttribute="trailingMargin" id="pc1-lh-upm"/>
+                                            <constraint firstItem="z0m-rK-2LM" firstAttribute="top" secondItem="MIt-aI-Pci" secondAttribute="topMargin" constant="13" id="vl4-UF-AdE"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -51,12 +57,34 @@
                                     <outlet property="delegate" destination="NVg-cj-b5B" id="649-6h-rr9"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXL-Dc-hqF">
+                                <rect key="frame" x="173" y="535" width="285" height="57"/>
+                                <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="space">
+                                    <color key="titleColor" red="0.35686274509803922" green="0.8784313725490196" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.35686274509803922" green="0.8784313725490196" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGp-3d-V02">
+                                <rect key="frame" x="466" y="535" width="125" height="57"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="return">
+                                    <color key="titleColor" red="0.35686274509999999" green="0.87843137250000003" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.35686274509999999" green="0.87843137250000003" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-tE-QWr">
+                                <rect key="frame" x="91" y="542" width="43" height="43"/>
+                                <state key="normal" image="globe">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.61830282700000005" green="1" blue="0.51415264260000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kiM-gF-FPi" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="-16" id="Jtw-NC-6mb"/>
                             <constraint firstItem="kiM-gF-FPi" firstAttribute="top" secondItem="mbH-65-deq" secondAttribute="topMargin" id="MFo-Td-uDn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kiM-gF-FPi" secondAttribute="trailing" constant="-25" id="tAd-JL-Iop"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kiM-gF-FPi" secondAttribute="trailing" constant="-16" id="tAd-JL-Iop"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,4 +96,7 @@
             <point key="canvasLocation" x="429" y="165"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="globe" width="91" height="91"/>
+    </resources>
 </document>

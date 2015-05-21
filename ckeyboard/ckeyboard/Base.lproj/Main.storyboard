@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7se-ms-q0m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7se-ms-q0m">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="JosefinSans-Bold.ttf">
@@ -25,8 +26,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
-                                <rect key="frame" x="70" y="132" width="250" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-9L-uT4">
+                                <rect key="frame" x="70" y="114" width="250" height="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
@@ -35,8 +36,8 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="g00-Z6-zbl"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yF6-Cm-Pk8">
-                                <rect key="frame" x="0.0" y="299" width="375" height="368"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yF6-Cm-Pk8">
+                                <rect key="frame" x="0.0" y="276" width="375" height="391"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.36078431370000003" green="0.8862745098" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,15 +49,21 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="es5-vY-KEg" id="mAa-dc-6hZ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htC-c6-vpJ">
-                                                    <rect key="frame" x="8" y="8" width="314" height="43"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htC-c6-vpJ">
+                                                    <rect key="frame" x="31" y="8" width="328" height="43"/>
                                                     <fontDescription key="fontDescription" name="JosefinSans-Bold" family="Josefin Sans" pointSize="25"/>
                                                     <color key="textColor" red="0.36078431372549019" green="0.88627450980392153" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="htC-c6-vpJ" firstAttribute="leading" secondItem="mAa-dc-6hZ" secondAttribute="leadingMargin" constant="23" id="00V-KX-ztx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="htC-c6-vpJ" secondAttribute="trailing" constant="8" id="XxQ-Px-Ew7"/>
+                                                <constraint firstItem="htC-c6-vpJ" firstAttribute="bottom" secondItem="mAa-dc-6hZ" secondAttribute="bottomMargin" id="Yh0-wI-y1M"/>
+                                                <constraint firstItem="htC-c6-vpJ" firstAttribute="top" secondItem="mAa-dc-6hZ" secondAttribute="topMargin" id="hI1-Nt-ue7"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="lblKeyTitle" destination="htC-c6-vpJ" id="BrQ-PD-XIy"/>
                                         </connections>
@@ -67,8 +74,12 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="cTT-QD-Dnw"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-uT-QeI">
-                                <rect key="frame" x="70" y="190" width="250" height="55"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextField1.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-uT-QeI">
+                                <rect key="frame" x="70" y="172" width="250" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="KBh-aD-5W2"/>
+                                    <constraint firstAttribute="width" constant="250" id="gn5-JF-m9m"/>
+                                </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
@@ -78,7 +89,21 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZlT-9L-uT4" secondAttribute="bottom" constant="523" id="1Xa-lo-Dvo"/>
+                            <constraint firstItem="cL8-uT-QeI" firstAttribute="top" secondItem="ZlT-9L-uT4" secondAttribute="bottom" constant="28" id="2T9-R5-kpa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZlT-9L-uT4" secondAttribute="trailing" constant="39" id="6fM-rb-SQX"/>
+                            <constraint firstItem="yF6-Cm-Pk8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="9q7-vs-081"/>
+                            <constraint firstItem="yF6-Cm-Pk8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="212" id="MK3-OQ-dwh"/>
+                            <constraint firstItem="cL8-uT-QeI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="108" id="MY4-uO-QZb"/>
+                            <constraint firstItem="ZlT-9L-uT4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="54" id="Mk2-yP-4LU"/>
+                            <constraint firstItem="cL8-uT-QeI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="54" id="Wfi-qN-peK"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yF6-Cm-Pk8" secondAttribute="bottom" id="ZC9-JL-7CG"/>
+                            <constraint firstItem="ZlT-9L-uT4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="f92-6n-LNn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cL8-uT-QeI" secondAttribute="trailing" constant="39" id="ib7-r6-ShY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yF6-Cm-Pk8" secondAttribute="trailing" constant="-16" id="r5y-60-NcP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Button" id="BHi-pS-eEZ">
                         <barButtonItem key="leftBarButtonItem" enabled="NO" title="Cancel" id="zqX-v4-ma1">

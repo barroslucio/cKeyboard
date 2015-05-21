@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7se-ms-q0m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7se-ms-q0m">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -64,10 +64,10 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="cTT-QD-Dnw"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " minimumFontSize="17" background="textField2.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-uT-QeI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " minimumFontSize="17" background="textField2.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-uT-QeI">
                                 <rect key="frame" x="70" y="172" width="250" height="72"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="KBh-aD-5W2"/>
+                                    <constraint firstAttribute="height" constant="72" id="KBh-aD-5W2"/>
                                     <constraint firstAttribute="width" constant="250" id="gn5-JF-m9m"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

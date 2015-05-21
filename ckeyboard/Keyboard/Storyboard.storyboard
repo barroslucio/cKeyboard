@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NVg-cj-b5B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NVg-cj-b5B">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -52,24 +52,36 @@
                                     <outlet property="delegate" destination="NVg-cj-b5B" id="649-6h-rr9"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXL-Dc-hqF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXL-Dc-hqF">
                                 <rect key="frame" x="173" y="535" width="285" height="57"/>
                                 <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="5rW-3H-oyj"/>
+                                    <constraint firstAttribute="height" constant="57" id="iao-HS-ddy"/>
+                                </constraints>
                                 <state key="normal" title="space">
                                     <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.1450980392" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGp-3d-V02">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGp-3d-V02">
                                 <rect key="frame" x="466" y="535" width="125" height="57"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="8aR-Sp-7nk"/>
+                                    <constraint firstAttribute="width" constant="125" id="XrC-TZ-aWZ"/>
+                                </constraints>
                                 <state key="normal" title="return">
                                     <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-tE-QWr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-tE-QWr">
                                 <rect key="frame" x="91" y="542" width="43" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="bsr-4y-aYQ"/>
+                                    <constraint firstAttribute="height" constant="43" id="kdZ-bf-eKc"/>
+                                </constraints>
                                 <state key="normal" image="globe">
                                     <attributedString key="attributedTitle"/>
                                 </state>
@@ -77,9 +89,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="DXL-Dc-hqF" firstAttribute="leading" secondItem="pXi-tE-QWr" secondAttribute="trailing" constant="39" id="0lD-aH-gFv"/>
+                            <constraint firstItem="iGp-3d-V02" firstAttribute="leading" secondItem="DXL-Dc-hqF" secondAttribute="trailing" constant="8" id="7wp-U4-nO4"/>
+                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="DXL-Dc-hqF" secondAttribute="bottom" constant="8" id="8ZQ-XA-3gI"/>
                             <constraint firstItem="kiM-gF-FPi" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="-16" id="Jtw-NC-6mb"/>
                             <constraint firstItem="kiM-gF-FPi" firstAttribute="top" secondItem="mbH-65-deq" secondAttribute="topMargin" id="MFo-Td-uDn"/>
+                            <constraint firstItem="DXL-Dc-hqF" firstAttribute="leading" secondItem="pXi-tE-QWr" secondAttribute="trailing" constant="39" id="VzI-xk-h1y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iGp-3d-V02" secondAttribute="trailing" constant="-7" id="XgW-NL-kCx"/>
+                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="iGp-3d-V02" secondAttribute="bottom" constant="8" id="abA-qh-Sxt"/>
+                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="pXi-tE-QWr" secondAttribute="bottom" constant="15" id="d3G-Me-wVZ"/>
+                            <constraint firstItem="iGp-3d-V02" firstAttribute="leading" secondItem="DXL-Dc-hqF" secondAttribute="trailing" constant="8" id="ltI-A8-rF5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kiM-gF-FPi" secondAttribute="trailing" constant="-16" id="tAd-JL-Iop"/>
+                            <constraint firstItem="pXi-tE-QWr" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="75" id="tos-gA-qAt"/>
                         </constraints>
                     </view>
                     <connections>

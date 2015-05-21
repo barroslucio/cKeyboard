@@ -33,8 +33,8 @@
     _isEditing = false;
     
     NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor grayColor]};
-    _txtFieldTitle.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Título" attributes: attributes];
-    _txtFieldContent.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Mensagem" attributes: attributes];
+    _txtFieldTitle.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Title" attributes: attributes];
+    _txtFieldContent.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Message" attributes: attributes];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -181,9 +181,9 @@
 
 - (void)changeTitleAccordingToTheContext{
     if(_isEditing)
-        [self.navigationItem setTitle:@"Editar Botão"];
+        [self.navigationItem setTitle:@"Edit Button"];
     else
-        [self.navigationItem setTitle:@"Novo Botão"];
+        [self.navigationItem setTitle:@"New Button"];
 }
 
 #pragma TextFieldDelegate methods implementation

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-gF-FPi">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-gF-FPi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="527"/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LpA-t9-qdl">
@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="179" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" tag="1" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuY-pZ-9qQ">
+                                                <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuY-pZ-9qQ">
                                                     <rect key="frame" x="8" y="8" width="163" height="68"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,6 +45,12 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="JuY-pZ-9qQ" firstAttribute="top" secondItem="MIt-aI-Pci" secondAttribute="topMargin" id="34w-2H-fuD"/>
+                                            <constraint firstItem="JuY-pZ-9qQ" firstAttribute="leading" secondItem="MIt-aI-Pci" secondAttribute="leadingMargin" id="KOQ-Em-RXE"/>
+                                            <constraint firstItem="JuY-pZ-9qQ" firstAttribute="trailing" secondItem="MIt-aI-Pci" secondAttribute="trailingMargin" id="MwE-cu-gPb"/>
+                                            <constraint firstItem="JuY-pZ-9qQ" firstAttribute="bottom" secondItem="MIt-aI-Pci" secondAttribute="bottomMargin" id="gAX-Jr-BN5"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -52,55 +58,59 @@
                                     <outlet property="delegate" destination="NVg-cj-b5B" id="649-6h-rr9"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXL-Dc-hqF">
-                                <rect key="frame" x="173" y="535" width="285" height="57"/>
-                                <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="285" id="5rW-3H-oyj"/>
-                                    <constraint firstAttribute="height" constant="57" id="iao-HS-ddy"/>
-                                </constraints>
-                                <state key="normal" title="space">
-                                    <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.1450980392" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGp-3d-V02">
-                                <rect key="frame" x="466" y="535" width="125" height="57"/>
+                                <rect key="frame" x="500" y="535" width="92" height="40"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="8aR-Sp-7nk"/>
-                                    <constraint firstAttribute="width" constant="125" id="XrC-TZ-aWZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="8aR-Sp-7nk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Abg-ph-ZCM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="K5b-wq-bRd"/>
+                                    <constraint firstAttribute="width" constant="92" id="XrC-TZ-aWZ"/>
                                 </constraints>
                                 <state key="normal" title="return">
                                     <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-tE-QWr">
-                                <rect key="frame" x="91" y="542" width="43" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXL-Dc-hqF">
+                                <rect key="frame" x="325" y="535" width="167" height="40"/>
+                                <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="43" id="bsr-4y-aYQ"/>
-                                    <constraint firstAttribute="height" constant="43" id="kdZ-bf-eKc"/>
+                                    <constraint firstAttribute="width" constant="167" id="5rW-3H-oyj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="9Fi-dG-DmK"/>
+                                    <constraint firstAttribute="height" constant="40" id="iao-HS-ddy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="yAu-KQ-A03"/>
                                 </constraints>
-                                <state key="normal" image="globe">
-                                    <attributedString key="attributedTitle"/>
+                                <state key="normal" title="space">
+                                    <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.1450980392" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3t4-Wd-FWR">
+                                <rect key="frame" x="275" y="535" width="42" height="40"/>
+                                <state key="normal" image="Globo22pt">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DXL-Dc-hqF" firstAttribute="leading" secondItem="pXi-tE-QWr" secondAttribute="trailing" constant="39" id="0lD-aH-gFv"/>
+                            <constraint firstItem="DXL-Dc-hqF" firstAttribute="top" secondItem="kiM-gF-FPi" secondAttribute="bottom" constant="8" id="3lc-RT-HPv"/>
                             <constraint firstItem="iGp-3d-V02" firstAttribute="leading" secondItem="DXL-Dc-hqF" secondAttribute="trailing" constant="8" id="7wp-U4-nO4"/>
-                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="DXL-Dc-hqF" secondAttribute="bottom" constant="8" id="8ZQ-XA-3gI"/>
+                            <constraint firstItem="DXL-Dc-hqF" firstAttribute="leading" secondItem="3t4-Wd-FWR" secondAttribute="trailing" constant="8" id="815-FG-9IT"/>
+                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="DXL-Dc-hqF" secondAttribute="bottom" constant="25" id="8ZQ-XA-3gI"/>
                             <constraint firstItem="kiM-gF-FPi" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="-16" id="Jtw-NC-6mb"/>
                             <constraint firstItem="kiM-gF-FPi" firstAttribute="top" secondItem="mbH-65-deq" secondAttribute="topMargin" id="MFo-Td-uDn"/>
-                            <constraint firstItem="DXL-Dc-hqF" firstAttribute="leading" secondItem="pXi-tE-QWr" secondAttribute="trailing" constant="39" id="VzI-xk-h1y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iGp-3d-V02" secondAttribute="trailing" constant="-7" id="XgW-NL-kCx"/>
-                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="iGp-3d-V02" secondAttribute="bottom" constant="8" id="abA-qh-Sxt"/>
-                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="pXi-tE-QWr" secondAttribute="bottom" constant="15" id="d3G-Me-wVZ"/>
+                            <constraint firstItem="DXL-Dc-hqF" firstAttribute="bottom" secondItem="3t4-Wd-FWR" secondAttribute="bottom" id="Ou6-DR-7r9"/>
+                            <constraint firstItem="iGp-3d-V02" firstAttribute="top" secondItem="kiM-gF-FPi" secondAttribute="bottom" constant="8" id="OwL-Wo-Atx"/>
+                            <constraint firstItem="3t4-Wd-FWR" firstAttribute="top" secondItem="DXL-Dc-hqF" secondAttribute="top" id="Ps3-vw-fRc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iGp-3d-V02" secondAttribute="trailing" constant="-8" id="XgW-NL-kCx"/>
+                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="iGp-3d-V02" secondAttribute="bottom" constant="25" id="abA-qh-Sxt"/>
+                            <constraint firstItem="3t4-Wd-FWR" firstAttribute="bottom" secondItem="DXL-Dc-hqF" secondAttribute="bottom" id="hi0-93-IRb"/>
                             <constraint firstItem="iGp-3d-V02" firstAttribute="leading" secondItem="DXL-Dc-hqF" secondAttribute="trailing" constant="8" id="ltI-A8-rF5"/>
+                            <constraint firstItem="3t4-Wd-FWR" firstAttribute="top" secondItem="kiM-gF-FPi" secondAttribute="bottom" constant="8" id="pSo-6O-MWs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kiM-gF-FPi" secondAttribute="trailing" constant="-16" id="tAd-JL-Iop"/>
-                            <constraint firstItem="pXi-tE-QWr" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="75" id="tos-gA-qAt"/>
+                            <constraint firstItem="iGp-3d-V02" firstAttribute="leading" secondItem="DXL-Dc-hqF" secondAttribute="trailing" constant="8" id="uPn-kw-tuY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -113,6 +123,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="globe" width="183" height="183"/>
+        <image name="Globo22pt" width="46" height="46"/>
     </resources>
 </document>

@@ -9,7 +9,7 @@
 #import "CKBMainViewController.h"
 
 // definição da quantidade máxima dos caracteres de cada campo (título e conteúdo)
-#define MAX_TITLE_CHARACTERS 10
+#define MAX_TITLE_CHARACTERS 15
 #define MAX_CONTENT_CHARACTERS 25
 
 @interface CKBMainViewController ()

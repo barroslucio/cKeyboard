@@ -7,6 +7,8 @@
 //
 
 #import "CKBMainViewController.h"
+#import "ViewController.h"
+
 
 // definição da quantidade máxima dos caracteres de cada campo (título e conteúdo)
 #define MAX_TITLE_CHARACTERS 10
@@ -35,6 +37,27 @@
     NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor grayColor]};
     _txtFieldTitle.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@" Title" attributes: attributes];
     _txtFieldContent.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@" Message" attributes: attributes];
+    
+    
+
+    //condicao para entrar na tela do tutorial:
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenTutorial"])     {
+        NSLog(@"Primeira vez");
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"bundle:nil];
+        ViewController *ViewController = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        [self presentViewController:ViewController animated:YES completion:nil];
+       
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
+        
+    }  else{
+        
+        //     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
+        NSLog(@"ja visualizou o tutorial");
+    
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

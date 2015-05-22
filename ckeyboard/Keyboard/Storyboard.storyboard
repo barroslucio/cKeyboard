@@ -17,11 +17,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-gF-FPi">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="727"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGp-3d-V02">
+                                <rect key="frame" x="496" y="751" width="92" height="40"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="W4Q-gY-xmW"/>
+                                    <constraint firstAttribute="height" constant="40" id="aaV-Pr-HkR"/>
+                                </constraints>
+                                <state key="normal" title="return">
+                                    <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXL-Dc-hqF">
+                                <rect key="frame" x="62" y="751" width="426" height="40"/>
+                                <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="Typ-oc-bk4"/>
+                                </constraints>
+                                <state key="normal" title="space">
+                                    <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.1450980392" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Typ-oc-bk4"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3t4-Wd-FWR">
+                                <rect key="frame" x="12" y="751" width="42" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="ruz-jh-vDN"/>
+                                </constraints>
+                                <state key="normal" image="Globo22pt">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-gF-FPi">
+                                <rect key="frame" x="0.0" y="541" width="600" height="185"/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="0lm-KM-tzu"/>
+                                    <constraint firstAttribute="height" constant="185" id="0lm-KM-tzu"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LpA-t9-qdl">
                                     <size key="itemSize" width="179" height="84"/>
@@ -43,6 +80,9 @@
                                                         <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="NVg-cj-b5B" eventType="touchUpInside" id="H6f-JO-S7v"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -55,59 +95,23 @@
                                     <outlet property="delegate" destination="NVg-cj-b5B" id="649-6h-rr9"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGp-3d-V02">
-                                <rect key="frame" x="500" y="735" width="92" height="40"/>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="W4Q-gY-xmW"/>
-                                    <constraint firstAttribute="height" constant="40" id="aaV-Pr-HkR"/>
-                                </constraints>
-                                <state key="normal" title="return">
-                                    <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXL-Dc-hqF">
-                                <rect key="frame" x="66" y="735" width="426" height="40"/>
-                                <color key="backgroundColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="Typ-oc-bk4"/>
-                                </constraints>
-                                <state key="normal" title="space">
-                                    <color key="titleColor" red="0.14509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.1450980392" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Typ-oc-bk4"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3t4-Wd-FWR">
-                                <rect key="frame" x="16" y="735" width="42" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="ruz-jh-vDN"/>
-                                </constraints>
-                                <state key="normal" image="Globo22pt">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.15294117647058825" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="iGp-3d-V02" secondAttribute="trailing" constant="-8" id="7S1-KY-XbG"/>
-                            <constraint firstItem="3t4-Wd-FWR" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" id="AK1-0b-Wt3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iGp-3d-V02" secondAttribute="trailing" constant="-4" id="7S1-KY-XbG"/>
+                            <constraint firstItem="3t4-Wd-FWR" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="-4" id="AK1-0b-Wt3"/>
                             <constraint firstItem="DXL-Dc-hqF" firstAttribute="bottom" secondItem="iGp-3d-V02" secondAttribute="bottom" id="Cdh-ma-z6N"/>
                             <constraint firstItem="DXL-Dc-hqF" firstAttribute="height" secondItem="iGp-3d-V02" secondAttribute="height" id="Hrt-4Y-FNV"/>
                             <constraint firstItem="3t4-Wd-FWR" firstAttribute="height" secondItem="DXL-Dc-hqF" secondAttribute="height" id="I8C-Ax-NhX"/>
-                            <constraint firstItem="kiM-gF-FPi" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="-16" id="K2V-s3-PfA"/>
-                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="iGp-3d-V02" secondAttribute="bottom" constant="25" id="PMw-0O-GJt"/>
+                            <constraint firstItem="kiM-gF-FPi" firstAttribute="top" secondItem="mbH-65-deq" secondAttribute="topMargin" constant="541" id="Jo5-qE-GOD"/>
+                            <constraint firstItem="mF5-d1-Mez" firstAttribute="top" secondItem="iGp-3d-V02" secondAttribute="bottom" constant="9" id="PMw-0O-GJt"/>
                             <constraint firstItem="DXL-Dc-hqF" firstAttribute="leading" secondItem="3t4-Wd-FWR" secondAttribute="trailing" constant="8" id="TIF-Ca-Sgs"/>
                             <constraint firstItem="iGp-3d-V02" firstAttribute="leading" secondItem="DXL-Dc-hqF" secondAttribute="trailing" constant="8" id="VRz-UA-vtB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kiM-gF-FPi" secondAttribute="trailing" constant="-16" id="dbt-q6-lTu"/>
-                            <constraint firstItem="kiM-gF-FPi" firstAttribute="top" secondItem="mbH-65-deq" secondAttribute="topMargin" id="kME-2C-NFH"/>
-                            <constraint firstItem="iGp-3d-V02" firstAttribute="top" secondItem="kiM-gF-FPi" secondAttribute="bottom" constant="8" id="nhy-zP-rLV"/>
+                            <constraint firstItem="kiM-gF-FPi" firstAttribute="leading" secondItem="mbH-65-deq" secondAttribute="leadingMargin" constant="-16" id="d2O-mO-Bl0"/>
+                            <constraint firstItem="kiM-gF-FPi" firstAttribute="top" secondItem="mbH-65-deq" secondAttribute="topMargin" constant="541" id="kME-2C-NFH"/>
+                            <constraint firstItem="iGp-3d-V02" firstAttribute="top" secondItem="kiM-gF-FPi" secondAttribute="bottom" constant="25" id="nhy-zP-rLV"/>
                             <constraint firstItem="3t4-Wd-FWR" firstAttribute="bottom" secondItem="DXL-Dc-hqF" secondAttribute="bottom" id="qwV-m3-s3c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kiM-gF-FPi" secondAttribute="trailing" constant="-16" id="s4S-tS-pny"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -118,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUQ-Lo-wAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="165"/>
+            <point key="canvasLocation" x="425" y="175"/>
         </scene>
     </scenes>
     <resources>

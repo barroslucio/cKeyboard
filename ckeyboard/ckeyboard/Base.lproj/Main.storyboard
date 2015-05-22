@@ -33,7 +33,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ButtonCell" rowHeight="60" id="es5-vY-KEg" customClass="KeyTableViewCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ButtonCell" rowHeight="60" id="es5-vY-KEg" customClass="KeyTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="es5-vY-KEg" id="mAa-dc-6hZ">

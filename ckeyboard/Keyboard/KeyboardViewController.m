@@ -24,6 +24,9 @@
 
    
 }
+- (IBAction)buttonPressed:(id)sender {
+    NSLog(@"bolovo");
+}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -50,8 +53,8 @@
     detailTitle.text = [results[indexPath.row] valueForKey:@"title"];
     */
     UIButton *detailButton = (UIButton *) [cell.contentView viewWithTag:1];
-    [detailButton setTitle:@"Key" forState:UIControlStateNormal] ;
-    
+    [detailButton setTitle:@"Key" forState:UIControlStateHighlighted];
+
     return cell;
     
   //  UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];

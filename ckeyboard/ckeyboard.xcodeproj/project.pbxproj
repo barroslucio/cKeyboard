@@ -28,6 +28,8 @@
 		BD1961211B0F62C90061C718 /* Keyboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1961201B0F62C90061C718 /* Keyboard.xcassets */; };
 		BDBD00121B0E1811003F8439 /* texField1.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBD00111B0E1811003F8439 /* texField1.png */; };
 		BDBD00141B0E1905003F8439 /* textField2.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBD00131B0E1905003F8439 /* textField2.png */; };
+		CD6031181B0F5CB7002C078A /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6031171B0F5CB7002C078A /* PageContentViewController.m */; };
+		CD60311B1B0F5CD9002C078A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD60311A1B0F5CD9002C078A /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,10 @@
 		BD1961201B0F62C90061C718 /* Keyboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Keyboard.xcassets; sourceTree = "<group>"; };
 		BDBD00111B0E1811003F8439 /* texField1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texField1.png; sourceTree = "<group>"; };
 		BDBD00131B0E1905003F8439 /* textField2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textField2.png; sourceTree = "<group>"; };
+		CD6031161B0F5CB7002C078A /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		CD6031171B0F5CB7002C078A /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		CD6031191B0F5CD9002C078A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD60311A1B0F5CD9002C078A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,10 @@
 			children = (
 				77C02F2C1AFE404B00AF8997 /* CKBMainViewController.h */,
 				77C02F2D1AFE404B00AF8997 /* CKBMainViewController.m */,
+				CD6031161B0F5CB7002C078A /* PageContentViewController.h */,
+				CD6031171B0F5CB7002C078A /* PageContentViewController.m */,
+				CD6031191B0F5CD9002C078A /* ViewController.h */,
+				CD60311A1B0F5CD9002C078A /* ViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -415,11 +425,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD60311B1B0F5CD9002C078A /* ViewController.m in Sources */,
 				77C02F2B1AFE404B00AF8997 /* ckeyboard.xcdatamodeld in Sources */,
 				1CD925A21B059FD300533B91 /* KeyStore.m in Sources */,
 				77C02F281AFE404B00AF8997 /* AppDelegate.m in Sources */,
 				1CD925A51B05AB5300533B91 /* KeyTableViewCell.m in Sources */,
 				77C02F2E1AFE404B00AF8997 /* CKBMainViewController.m in Sources */,
+				CD6031181B0F5CB7002C078A /* PageContentViewController.m in Sources */,
 				77C02F251AFE404B00AF8997 /* main.m in Sources */,
 				1CD9259F1B059F8C00533B91 /* Key.m in Sources */,
 			);

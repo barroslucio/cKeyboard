@@ -57,6 +57,11 @@
     
     }
     
+    // teclado some quando clicar na tela
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    tap.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tap];
     
 }
 
@@ -208,13 +213,24 @@
     else
         [self.navigationItem setTitle:@"New Button"];
 }
-
-#pragma TextFieldDelegate methods implementation
-    // Esconder o teclado (ao clicar na tecla return)
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+//some teclado, verificar
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
 }
+
+
+- (void)dismissKeyboard {
+    [self.txtFieldTitle resignFirstResponder];
+    [self.txtFieldContent resignFirstResponder];
+}
+
+#pragma TextFieldDelegate methods implementation
+    // Esconder o teclado (ao clicar na tecla return)
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+//    [textField resignFirstResponder];
+//    return YES;
+//}
 
     //Delimitar a quantidade de caracteres que pdem ser digitados
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

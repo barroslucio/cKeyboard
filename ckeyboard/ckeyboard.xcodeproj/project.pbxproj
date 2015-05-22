@@ -25,6 +25,7 @@
 		77D48A321B07F68E0087EE12 /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 77D48A291B07F68E0087EE12 /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		77E9D5961B0A0E8D00248EF4 /* ckeyboard.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 77C02F291AFE404B00AF8997 /* ckeyboard.xcdatamodeld */; };
 		77E9D5991B0B7E2100248EF4 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E9D5981B0B7E2100248EF4 /* CoreData.m */; };
+		BD1961211B0F62C90061C718 /* Keyboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1961201B0F62C90061C718 /* Keyboard.xcassets */; };
 		BDBD00121B0E1811003F8439 /* texField1.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBD00111B0E1811003F8439 /* texField1.png */; };
 		BDBD00141B0E1905003F8439 /* textField2.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBD00131B0E1905003F8439 /* textField2.png */; };
 		CD6031181B0F5CB7002C078A /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6031171B0F5CB7002C078A /* PageContentViewController.m */; };
@@ -94,6 +95,7 @@
 		77E9D5951B0A0E3100248EF4 /* ckeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ckeyboard.entitlements; sourceTree = "<group>"; };
 		77E9D5971B0B7E2100248EF4 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		77E9D5981B0B7E2100248EF4 /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
+		BD1961201B0F62C90061C718 /* Keyboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Keyboard.xcassets; sourceTree = "<group>"; };
 		BDBD00111B0E1811003F8439 /* texField1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texField1.png; sourceTree = "<group>"; };
 		BDBD00131B0E1905003F8439 /* textField2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textField2.png; sourceTree = "<group>"; };
 		CD6031161B0F5CB7002C078A /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				77D48A2B1B07F68E0087EE12 /* Supporting Files */,
 				77E9D5971B0B7E2100248EF4 /* CoreData.h */,
 				77E9D5981B0B7E2100248EF4 /* CoreData.m */,
+				BD1961201B0F62C90061C718 /* Keyboard.xcassets */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 					};
 					77D48A281B07F68E0087EE12 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = E3W352F98S;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -408,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1961211B0F62C90061C718 /* Keyboard.xcassets in Resources */,
 				77E9D5961B0A0E8D00248EF4 /* ckeyboard.xcdatamodeld in Resources */,
 				77B751581B0808F400D34784 /* Storyboard.storyboard in Resources */,
 			);
@@ -629,6 +634,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Keyboard/Keyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -636,6 +642,7 @@
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -645,9 +652,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Keyboard/Keyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

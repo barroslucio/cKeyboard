@@ -43,7 +43,7 @@
 }
 
 
-
+/*
 -(void)buttonPressed:(UIButton *)sender
 {
     CGPoint center = CGPointMake(CGRectGetMidX(sender.bounds), CGRectGetMidY(sender.bounds));
@@ -74,12 +74,12 @@
     [self.textDocumentProxy insertText:[results[indexPath.row]valueForKey:@"content" ]];
     
 }
-
+*/
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    
+    /*
     //add dynamic action
     if (cell.button.allTargets.count == 0)
         [cell.button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -102,7 +102,8 @@
     
     [cell.button setTitle:[results[indexPath.row] valueForKey:@"title"] forState:UIControlStateNormal];
 
-   
+     */
+    [cell.button setTitle:@"Title" forState:UIControlStateNormal];
     return cell;
     
  
@@ -113,7 +114,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-   
+   /*
     CoreData *appDel = [[CoreData alloc] init];
     NSManagedObjectContext *context = appDel.managedObjectContext;
     
@@ -129,7 +130,8 @@
     NSArray *results = [[NSArray alloc] init];
     results = [context executeFetchRequest:request error:nil];
     return results.count;
-    
+    */
+    return 10;
  
     }
 

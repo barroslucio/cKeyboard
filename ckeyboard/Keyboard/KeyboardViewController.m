@@ -7,8 +7,10 @@
 //
 
 #import "KeyboardViewController.h"
+#import "CollectionViewCell.h"
 
 @interface KeyboardViewController ()
+
 @end
 
 @implementation KeyboardViewController
@@ -21,18 +23,67 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [self.spaceKey addTarget:self action:@selector(pressSpaceKey) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.returnKey addTarget:self action:@selector(pressReturnKey) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.globeKey addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
    
+    
 }
-- (IBAction)buttonPressed:(id)sender {
-    NSLog(@"bolovo");
+
+
+- (void)pressSpaceKey{
+    [self.textDocumentProxy insertText:@" "];
+}
+
+- (void)pressReturnKey{
+    [self.textDocumentProxy deleteBackward];
+}
+
+
+
+-(void)buttonPressed:(UIButton *)sender
+{
+    CGPoint center = CGPointMake(CGRectGetMidX(sender.bounds), CGRectGetMidY(sender.bounds));
+    CGPoint transformedCenter = [sender convertPoint:center toView:self.collectionView];
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:transformedCenter];
+    
+    if (indexPath == nil) {
+        return;
+    }
+    
+    
+    CoreData *appDel = [[CoreData alloc] init];
+    NSManagedObjectContext *context = appDel.managedObjectContext;
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Key" inManagedObjectContext:context];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    [request setEntity:entity];
+    
+    [request entityName];
+    request.returnsObjectsAsFaults = false;
+    
+    NSArray *results = [[NSArray alloc] init];
+    results = [context executeFetchRequest:request error:nil];
+
+    [self.textDocumentProxy insertText:[results[indexPath.row]valueForKey:@"content" ]];
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-   /*
+    
+    //add dynamic action
+    if (cell.button.allTargets.count == 0)
+        [cell.button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+                                                                                                                       
     CoreData *appDel = [[CoreData alloc] init];
     NSManagedObjectContext *context = appDel.managedObjectContext;
     
@@ -49,17 +100,12 @@
     results = [context executeFetchRequest:request error:nil];
     
     
-    UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];
-    detailTitle.text = [results[indexPath.row] valueForKey:@"title"];
-    */
-    UIButton *detailButton = (UIButton *) [cell.contentView viewWithTag:1];
-    [detailButton setTitle:@"Key" forState:UIControlStateHighlighted];
+    [cell.button setTitle:[results[indexPath.row] valueForKey:@"title"] forState:UIControlStateNormal];
 
+   
     return cell;
     
-  //  UILabel *detailTitle = (UILabel *)[cell.contentView viewWithTag:1];
-//    detailTitle.text = @"Key Title";
- //   return cell;
+ 
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -67,7 +113,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-   /* 
+   
     CoreData *appDel = [[CoreData alloc] init];
     NSManagedObjectContext *context = appDel.managedObjectContext;
     
@@ -83,8 +129,8 @@
     NSArray *results = [[NSArray alloc] init];
     results = [context executeFetchRequest:request error:nil];
     return results.count;
-    */
-    return 10;
+    
+ 
     }
 
 

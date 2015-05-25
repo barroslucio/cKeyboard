@@ -12,6 +12,7 @@
 		1CD9259F1B059F8C00533B91 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9259E1B059F8C00533B91 /* Key.m */; };
 		1CD925A21B059FD300533B91 /* KeyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A11B059FD300533B91 /* KeyStore.m */; };
 		1CD925A51B05AB5300533B91 /* KeyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD925A41B05AB5300533B91 /* KeyTableViewCell.m */; };
+		778C44B01B120CC70067DD35 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 778C44AF1B120CC70067DD35 /* CollectionViewCell.m */; };
 		77B751581B0808F400D34784 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B751571B0808F400D34784 /* Storyboard.storyboard */; };
 		77C02F251AFE404B00AF8997 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F241AFE404B00AF8997 /* main.m */; };
 		77C02F281AFE404B00AF8997 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C02F271AFE404B00AF8997 /* AppDelegate.m */; };
@@ -72,6 +73,8 @@
 		1CD925A11B059FD300533B91 /* KeyStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyStore.m; sourceTree = "<group>"; };
 		1CD925A31B05AB5300533B91 /* KeyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyTableViewCell.h; sourceTree = "<group>"; };
 		1CD925A41B05AB5300533B91 /* KeyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyTableViewCell.m; sourceTree = "<group>"; };
+		778C44AE1B120CC70067DD35 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		778C44AF1B120CC70067DD35 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		77B751571B0808F400D34784 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		77C02F1F1AFE404B00AF8997 /* ckeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ckeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C02F231AFE404B00AF8997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				77E9D5941B0A0E2400248EF4 /* Keyboard.entitlements */,
 				77D48A2D1B07F68E0087EE12 /* KeyboardViewController.h */,
 				77D48A2E1B07F68E0087EE12 /* KeyboardViewController.m */,
+				778C44AE1B120CC70067DD35 /* CollectionViewCell.h */,
+				778C44AF1B120CC70067DD35 /* CollectionViewCell.m */,
 				77B751571B0808F400D34784 /* Storyboard.storyboard */,
 				77D48A2B1B07F68E0087EE12 /* Supporting Files */,
 				77E9D5971B0B7E2100248EF4 /* CoreData.h */,
@@ -345,6 +350,7 @@
 				TargetAttributes = {
 					77C02F1E1AFE404B00AF8997 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = V9L7W6G6H2;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -357,7 +363,7 @@
 					};
 					77D48A281B07F68E0087EE12 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = E3W352F98S;
+						DevelopmentTeam = V9L7W6G6H2;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -449,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778C44B01B120CC70067DD35 /* CollectionViewCell.m in Sources */,
 				77E9D5991B0B7E2100248EF4 /* CoreData.m in Sources */,
 				77D48A2F1B07F68E0087EE12 /* KeyboardViewController.m in Sources */,
 			);

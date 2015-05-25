@@ -13,5 +13,8 @@
 @interface KeyboardViewController : UIInputViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet UIButton *globeKey;
+@property (strong, nonatomic) IBOutlet UIButton *spaceKey;
+@property (strong, nonatomic) IBOutlet UIButton *returnKey;
 
 @end

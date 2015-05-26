@@ -114,7 +114,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+/*
 - (IBAction)startWalkthrough:(id)sender {
     
     PageContentViewController *startingViewController = [self viewControllerAtIndex:0]; //define para qual tela vai apos clicar no botao Start Again
@@ -123,4 +123,5 @@
     NSLog(@"\n\n Iniciar \n\n");
     
 }
+ */
 @end

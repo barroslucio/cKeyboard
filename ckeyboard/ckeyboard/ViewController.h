@@ -12,7 +12,7 @@
 
 @interface ViewController : UIViewController <UIPageViewControllerDataSource>
 
-- (IBAction)startWalkthrough:(id)sender;
+//- (IBAction)startWalkthrough:(id)sender;
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 

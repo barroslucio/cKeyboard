@@ -18,8 +18,8 @@
     [super viewDidLoad];
     
     // Criaçao Data Model
-    _pageTitles = @[@"Titulo 1", @"Titulo 2", @"Titulo 3"];
-    _pageImages = @[@"page1.png", @"page2.png", @"page3.png"];
+ 
+    _pageImages = @[@"Tutorial1.png", @"Tutorial2.png"];
     
     // Criação Page View Controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
@@ -30,7 +30,7 @@
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
     
     // Change the size of page view controller
-    self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
+  //  self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
     
     [self addChildViewController:_pageViewController];
     [self.view addSubview:_pageViewController.view];
@@ -52,7 +52,7 @@
 -(PageContentViewController *)viewControllerAtIndex:(NSUInteger)index {
     
     
-    if (([self.pageTitles count] == 0) || (index >= [self.pageTitles count])) {
+    if (([self.pageImages count] == 0) || (index >= [self.pageImages count])) {
         
         return nil;
     }
@@ -60,7 +60,7 @@
     //  Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     pageContentViewController.imageFile = self.pageImages[index];
-    pageContentViewController.titleText = self.pageTitles[index];
+   // pageContentViewController.titleText = self.pageTitles[index];
     pageContentViewController.pageIndex = index;
     
     return pageContentViewController;
@@ -89,17 +89,17 @@
     }
     
     index++;
-    if (index == [self.pageTitles count]) {
+    if (index == [self.pageImages count]) {
         return nil;
     }
     return [self viewControllerAtIndex:index];
 }
-// VERIFICAR TROCA pageTitles -> pageImages
+/*// VERIFICAR TROCA  pageImages
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController{
     
-    return [self.pageTitles count];
+    return [self.pageImages count];
 }
-
+*/
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
     
     return 0;

@@ -42,7 +42,7 @@
 
     //condicao para entrar na tela do tutorial:
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenTutorial"])     {
-        NSLog(@"Primeira vez");
+       // NSLog(@"Primeira vez");
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"bundle:nil];
         ViewController *ViewController = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
@@ -52,8 +52,8 @@
         
     }  else{
         
-        //     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
-        NSLog(@"ja visualizou o tutorial");
+             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
+        //NSLog(@"ja visualizou o tutorial");
     
     }
     

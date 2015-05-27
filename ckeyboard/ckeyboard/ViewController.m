@@ -36,7 +36,7 @@
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
     
-    NSLog(@" iniciou ..." );
+   // NSLog(@" iniciou ..." );
     
 }
 
@@ -44,9 +44,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//Start Again Button:
-
 
 
 -(PageContentViewController *)viewControllerAtIndex:(NSUInteger)index {

@@ -165,7 +165,7 @@
     [_tbViewButtons reloadData];
     
     // zera os text fields
-    _txtFieldTitle.text = _txtFieldContent.text = @" ";
+    _txtFieldTitle.text = _txtFieldContent.text = @"";
     
     // trata o botão Cancell
     [self shouldEnableButtonCancel];
@@ -175,7 +175,7 @@
 
     // ação executada quando o botão Cancel for clicado
 - (IBAction)cancelAddOrEdition:(UIBarButtonItem *)sender {
-    _txtFieldTitle.text = _txtFieldContent.text = @" ";
+    _txtFieldTitle.text = _txtFieldContent.text = @"";
     _isEditing = false;
     [self.tbViewButtons deselectRowAtIndexPath:[self.tbViewButtons indexPathForSelectedRow] animated:YES];
     [self changeTitleAccordingToTheContext];
